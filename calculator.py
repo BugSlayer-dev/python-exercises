@@ -37,12 +37,10 @@ while True:
     except ValueError :
         print("Please enter a number.")
     except ZeroDivisionError :
-        print("The number shouldn't be 0.")
-    finally:
-        j=input("Are you planning to continue? y/n\t")
-        if j=="n":
-            break
-        else:
-            continue
+        print("Cannot divide by zero.")
+
+    j=input("Continue? y/n:\t").strip().lower()
+    if j=="n":
+        break
 
 
